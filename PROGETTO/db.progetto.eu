@@ -1,0 +1,8 @@
+$ORIGIN progetto.eu.
+$TTL 60000
+@ IN		SOA	ns.progetto.eu.	admin.progetto.eu. (1 28800 14400 36000000 0)
+@ IN		NS	ns.progetto.eu.
+ns.progetto.eu.		IN	A	192.168.0.1
+
+FTP			IN	A	192.168.0.3
+HTTP			IN	A	192.168.0.4

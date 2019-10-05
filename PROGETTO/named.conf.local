@@ -1,0 +1,24 @@
+key "rndc-key" {
+	algorithm hmac-md5;
+	secret "wgYKWOGzllrrDkHpZKAyUg==";
+};
+
+controls {
+        inet 192.168.0.1 allow { 192.168.0.2; } keys { "rndc-key"; };
+};
+
+zone "progetto.eu" {
+	type master;
+	file "/etc/bind/db.progetto.eu";
+	update-policy {
+        grant rndc-key zonesub A PTR DHCID; #tutti i tipi di record che vuoi poter creare
+    	};
+};
+
+zone "0.168.192.in-addr.arpa" {
+	type master;
+	file "/etc/bind/0.168.192.in-addr.arpa";
+	update-policy {
+        grant rndc-key zonesub A PTR DHCID; #tutti i tipi di record che vuoi poter creare
+    	};
+};

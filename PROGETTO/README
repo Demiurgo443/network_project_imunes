@@ -1,0 +1,6 @@
+Design and deployment of a network consisting of:
+- A DHCP server distributing IP addresses
+- A DNS server translating domain names in IP addresses
+- A choice of two: FTP server, HTTP server, SMTP server
+- An internal and an external user
+- IMUNES
