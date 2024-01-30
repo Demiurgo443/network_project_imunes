@@ -1,8 +1,0 @@
-sono andato a scariare
-il pacchetto di VSFTPD direttamente dal sito dove ci sono i pacchetti di Debian.
-Ho estratto tutto in una cartella e all'interno di essa ho creato la directory home/ftp
-che non era presente (quando si lancia FTP, client vede :/home/ftp come :/)
-Ho modificato vsftpd.conf per:
- - disabilitare ipv6
- - abilitare utente anonymous per fare delle prove (abilitando sia creazione cartelle sia upload)
- - creata cartella secure_chroot_dir=/var/run/vsftpd/empty
